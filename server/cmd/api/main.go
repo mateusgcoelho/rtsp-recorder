@@ -22,12 +22,12 @@ func main() {
 
 	baseURL := os.Getenv("BASE_URL")
 	if baseURL == "" {
-		baseURL = "http://localhost:8080/"
+		baseURL = "http://localhost:3030/"
 	}
 
 	addr := os.Getenv("ADDRESS")
 	if addr == "" {
-		addr = ":8080"
+		addr = ":3030"
 	}
 
 	worker := recording.NewWorker(baseURL)

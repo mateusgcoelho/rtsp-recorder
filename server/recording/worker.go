@@ -103,9 +103,10 @@ func (w *Worker) runRecording(camera models.Camera, output OutputRecording) {
 	args := []string{
 		"-i", camera.RTSPUrl,
 		"-c:v", "copy",
-		"-c:a", "aac",
+		"-an",
 		"-f", "hls",
-		"-hls_time", "5",
+		"-hls_time", "1",
+		"-hls_list_size", "0",
 		"-hls_base_url", segmentsURL,
 		output.PlaylistPath,
 	}

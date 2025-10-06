@@ -1,6 +1,6 @@
 import type { Camera, CreateCameraRequest, Recording } from "../types/api";
 
-const API_BASE_URL = "http://localhost:8080/api/v1";
+export const API_BASE_URL = "http://localhost:3030/api/v1";
 
 class ApiService {
   async getCameras(): Promise<Camera[]> {

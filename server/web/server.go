@@ -73,10 +73,6 @@ func (s *server) handleCreateCamera(c *gin.Context) {
 		return
 	}
 
-	if err := s.worker.Start(camera); err != nil {
-		log.Printf("failed to start recording for camera %d: %v", camera.ID, err)
-	}
-
 	c.JSON(http.StatusOK, camera)
 }
 
