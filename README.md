@@ -4,7 +4,7 @@ RTSP Recorder is a proof of concept for recording RTSP camera streams with a sim
 
 ## Demo
 
-[Click here to watch the demo](./demo.mp4)
+[Watch the demo on YouTube](https://youtu.be/JcblV2qwBV4)
 
 ## Run
 
