@@ -1,0 +1,23 @@
+services:
+  web:
+    image: mateusgcoelho/rtsp-recorder-panel:latest
+    container_name: rtsp-recorder-panel
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - "80:80"
+  
+  api:
+    image: mateusgcoelho/rtsp-recorder-api:latest
+    container_name: rtsp-recorder-api
+    restart: unless-stopped
+    pull_policy: always
+    environment:
+      - BASE_URL=http://192.168.1.224:3030
+    ports:
+      - "3030:3030"
+    volumes:
+      - api-data:/root/data
+
+volumes:
+  api-data:

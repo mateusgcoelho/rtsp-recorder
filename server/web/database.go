@@ -11,7 +11,7 @@ type database struct {
 }
 
 func NewDatabase() (*database, error) {
-	clientGorm, err := gorm.Open(sqlite.Open("db.sqlite"), &gorm.Config{})
+	clientGorm, err := gorm.Open(sqlite.Open("./data/db.sqlite"), &gorm.Config{})
 	if err != nil {
 		return nil, err
 	}
